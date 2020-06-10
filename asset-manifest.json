@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/bondo/static/css/main.7cb0dc5f.chunk.css",
+    "main.js": "/bondo/static/js/main.93effa2f.chunk.js",
+    "main.js.map": "/bondo/static/js/main.93effa2f.chunk.js.map",
+    "runtime-main.js": "/bondo/static/js/runtime-main.55f06271.js",
+    "runtime-main.js.map": "/bondo/static/js/runtime-main.55f06271.js.map",
+    "static/css/2.8a6816d3.chunk.css": "/bondo/static/css/2.8a6816d3.chunk.css",
+    "static/js/2.8056f57f.chunk.js": "/bondo/static/js/2.8056f57f.chunk.js",
+    "static/js/2.8056f57f.chunk.js.map": "/bondo/static/js/2.8056f57f.chunk.js.map",
+    "index.html": "/bondo/index.html",
+    "precache-manifest.0be8dd437680110cfeada75c07252f59.js": "/bondo/precache-manifest.0be8dd437680110cfeada75c07252f59.js",
+    "service-worker.js": "/bondo/service-worker.js",
+    "static/css/2.8a6816d3.chunk.css.map": "/bondo/static/css/2.8a6816d3.chunk.css.map",
+    "static/css/main.7cb0dc5f.chunk.css.map": "/bondo/static/css/main.7cb0dc5f.chunk.css.map",
+    "static/js/2.8056f57f.chunk.js.LICENSE.txt": "/bondo/static/js/2.8056f57f.chunk.js.LICENSE.txt",
+    "static/media/logo.PNG": "/bondo/static/media/logo.dfdad147.PNG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.55f06271.js",
+    "static/css/2.8a6816d3.chunk.css",
+    "static/js/2.8056f57f.chunk.js",
+    "static/css/main.7cb0dc5f.chunk.css",
+    "static/js/main.93effa2f.chunk.js"
+  ]
+}
