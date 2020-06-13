@@ -26,18 +26,27 @@ audio{
     stroke-width: 1;
 }
 /* End */
-
 .text-blue {
     background-color: #4e6fc4;
     color: white;
 }
 
+.styless-button,
+.styless-button:focus{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: none;
+}
 
 .link,
 .link:hover,
 .link:active {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 

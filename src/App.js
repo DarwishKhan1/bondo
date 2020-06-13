@@ -8,6 +8,8 @@ import HeaderComponent from './Components/header/HeaderComponent';
 import VerificationComponent from './Components/Verifications/Verification';
 import DashboardComponent from './Components/Dashboard/Dashboard';
 import NotesComponent from './Components/Notes/notes';
+import LocationCompenent from './Components/Notes/location';
+import DetailsComponent from './Components/Notes/details';
 
 const styles = StyleSheet.create({
   container: {
@@ -52,6 +54,8 @@ class App extends React.Component {
                 <Route exact path="/" component={DashboardComponent} />
                 <Route exact path="/verification" component={VerificationComponent} />
                 <Route exact path="/notes" component={NotesComponent} />
+                <Route exact path="/note/location/:id" component={LocationCompenent} />
+                <Route exact path="/note/details/:id" component={DetailsComponent} />
               </Switch>
             </div>
           </Column>
