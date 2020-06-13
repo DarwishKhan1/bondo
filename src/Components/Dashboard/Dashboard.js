@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import PropTypes from 'prop-types'
 import firebaseDb from '../Common/firebaseConfig'
+import Spinner from '../Common/spinner'
 
 const Dashboard = props => {
     const [notes, setNotes] = useState(null);
@@ -23,7 +24,7 @@ const Dashboard = props => {
             })
     }, []);
     return (
-        (notes && users) &&  <div className="container mt-5">
+        !(notes && users) ? <Spinner /> : <div className="container mt-5">
         <div className="row">
             <div className="col-md-4">
                 <div className="card bg-light m-1">

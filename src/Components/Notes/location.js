@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Fragment } from "react";
 import PropTypes from "prop-types";
 import firebaseDb from "../Common/firebaseConfig";
+import Spinner from "../Common/spinner";
 import GoogleMap from './GoogleMap'
 
 const Location = ({match}) => {
@@ -19,10 +20,10 @@ const Location = ({match}) => {
         });
     }, []);
     return (
-        note && <div>
+        !(note) ? <Spinner /> :  <Fragment>
           <h4 className="mb-3">Location</h4>
           <GoogleMap latitude= {note.lat} longitude={note.long}/>
-        </div>
+        </Fragment>
     )
 }
 
