@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/bondo/static/css/main.18facdfd.chunk.css",
-    "main.js": "/bondo/static/js/main.9aae74dd.chunk.js",
-    "main.js.map": "/bondo/static/js/main.9aae74dd.chunk.js.map",
+    "main.js": "/bondo/static/js/main.fdbac125.chunk.js",
+    "main.js.map": "/bondo/static/js/main.fdbac125.chunk.js.map",
     "runtime-main.js": "/bondo/static/js/runtime-main.55f06271.js",
     "runtime-main.js.map": "/bondo/static/js/runtime-main.55f06271.js.map",
     "static/css/2.8a6816d3.chunk.css": "/bondo/static/css/2.8a6816d3.chunk.css",
     "static/js/2.986e8102.chunk.js": "/bondo/static/js/2.986e8102.chunk.js",
     "static/js/2.986e8102.chunk.js.map": "/bondo/static/js/2.986e8102.chunk.js.map",
     "index.html": "/bondo/index.html",
-    "precache-manifest.c3d68b3e36469ddd5431dfc109c781fc.js": "/bondo/precache-manifest.c3d68b3e36469ddd5431dfc109c781fc.js",
+    "precache-manifest.6917e9b9df050c038753a8499f9acadd.js": "/bondo/precache-manifest.6917e9b9df050c038753a8499f9acadd.js",
     "service-worker.js": "/bondo/service-worker.js",
     "static/css/2.8a6816d3.chunk.css.map": "/bondo/static/css/2.8a6816d3.chunk.css.map",
     "static/css/main.18facdfd.chunk.css.map": "/bondo/static/css/main.18facdfd.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.8a6816d3.chunk.css",
     "static/js/2.986e8102.chunk.js",
     "static/css/main.18facdfd.chunk.css",
-    "static/js/main.9aae74dd.chunk.js"
+    "static/js/main.fdbac125.chunk.js"
   ]
 }
