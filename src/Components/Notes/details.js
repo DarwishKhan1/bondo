@@ -76,7 +76,7 @@ const Details = ({ match }) => {
             <h4 className="text-center my-5">Replies</h4>
 
             {replyies.map((reply, index) => {
-              const { address, title, pic } = reply; //destructuring
+              const { address, title, pic, noteUrl } = reply; //destructuring
               return (
                 <Fragment key={index}>
                   <div class="row">
@@ -98,7 +98,7 @@ const Details = ({ match }) => {
                         <strong>Address:</strong> {address}
                       </p>
                       <audio controls style={{ border: "1px solid black" }}>
-                        <source src={note.noteUrl} type="audio/mpeg" />
+                        <source src={noteUrl} type="audio/mpeg" />
                         Your browser does not support the audio element.
                       </audio>
                     </div>
