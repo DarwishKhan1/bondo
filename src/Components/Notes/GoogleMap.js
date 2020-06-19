@@ -1,39 +1,38 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {
-  GoogleMap,
-  withScriptjs,
-  withGoogleMap,
-  Marker,
-  InfoWindow,
-} from "react-google-maps";
-let lat;
-let long;
-function map() {
-  return (
-    <GoogleMap defaultZoom={5} defaultCenter={{ lat: 30.3753, lng: 69.34 }}>
-      <Marker position={{ lat: lat, lng: long }} />
-    </GoogleMap>
-  );
-}
+import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 
-const WrappedMap = withScriptjs(withGoogleMap(map));
+const GoogleMap = (props) => {
+  var lat = parseFloat(props.latitude);
+  var long = parseFloat(props.longitude);
 
-const GoogleMaps = ({ longitude, latitude}) => {
-    lat = latitude;
-    long = longitude;
+  console.log(lat, long);
+
+  const style = {
+    width: "70%",
+    height: "70%",
+  };
   return (
-    <div style={{ width: "75vw", height: "70vh", position: "relative" }}>
-      <WrappedMap
-        googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyBxZzD-KekhDCYnlZEeLu2_GVhQZMY1ASI&libraries=places`}
-        loadingElement={<div style={{ height: `100%` }} />}
-        containerElement={<div style={{ height: `100%` }} />}
-        mapElement={<div style={{ height: `100%` }} />}
-      />
-    </div>
+    (lat && long) !== NaN && (
+      <div>
+        <Map
+          google={props.google}
+          zoom={16}
+          style={style}
+          initialCenter={{
+            lat: lat,
+            lng: long,
+          }}
+        >
+          <Marker position={{ lat: lat, lng: long }} />
+        </Map>
+      </div>
+    )
   );
 };
 
-GoogleMaps.propTypes = {};
+GoogleMap.propTypes = {};
 
-export default GoogleMaps;
+export default GoogleApiWrapper({
+  apiKey: "AIzaSyBxZzD-KekhDCYnlZEeLu2_GVhQZMY1ASI",
+})(GoogleMap);

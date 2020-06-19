@@ -6,7 +6,7 @@ import GoogleMap from './GoogleMap'
 
 const Location = ({match}) => {
     const id = match.params.id;
-    const [note, setNote] = useState({});
+    const [note, setNote] = useState(null);
     useEffect(() => {
       firebaseDb
         .collection("notes")
@@ -20,9 +20,9 @@ const Location = ({match}) => {
         });
     }, []);
     return (
-        !(note) ? <Spinner /> :  <Fragment>
+        (note === null) ? <Spinner /> :  <Fragment>
           <h4 className="mb-3">Location</h4>
-          <GoogleMap latitude= {note.lat} longitude={note.long}/>
+          <GoogleMap latitude={note.lat} longitude={note.long}/>
         </Fragment>
     )
 }
