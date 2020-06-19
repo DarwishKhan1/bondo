@@ -18,8 +18,9 @@ const Details = ({ match }) => {
       .then((snapshot) => {
         setNote(snapshot.data());
         firebaseDb
-          .collection("replies")
-          .where("token", "==", snapshot.data().token)
+          .collection("notes")
+          .doc(id)
+          .collection("reply")
           .get()
           .then((snap) => {
             const replyList = [];
@@ -43,8 +44,8 @@ const Details = ({ match }) => {
       <div className="container">
         <h3 className="text-center my-3">Details</h3>
         <div className="row">
-          <div className="col-md-3">
-            <img src={note.pic} width="100%" height="180px" />
+          <div className="col-md-4">
+            <img src={note.pic} width="100%" height="200px" />
           </div>
           <div className="col-md-4 mt-2">
             <p>
@@ -90,40 +91,22 @@ const Details = ({ match }) => {
                       </div>
                     </div>
                     <div className="col-sm-9">
-                      <p>{title}</p>
-                      <p>{address}</p>
+                      <p>
+                        <strong>Title:</strong> {title}
+                      </p>
+                      <p>
+                        <strong>Address:</strong> {address}
+                      </p>
+                      <audio controls style={{ border: "1px solid black" }}>
+                        <source src={note.noteUrl} type="audio/mpeg" />
+                        Your browser does not support the audio element.
+                      </audio>
                     </div>
                   </div>
                   <hr width="100%" />
                 </Fragment>
               );
             })}
-
-            {/* <Table breakPoint={768}>
-              <Thead>
-                <Tr>
-                  <Th>Image</Th>
-                  <Th>Title</Th>
-                  <Th>Address</Th>
-                </Tr>
-              </Thead>
-              <Tbody>
-                {replyies &&
-                  replyies.map((reply, index) => {
-                    const { address, title, pic } = reply; //destructuring
-
-                    return (
-                      <Tr key={index}>
-                        <Td>
-                          <img src={pic} width="50" height="30" alt={title} />
-                        </Td>
-                        <Td>{title}</Td>
-                        <Td>{address}</Td>
-                      </Tr>
-                    );
-                  })}
-              </Tbody>
-            </Table> */}
           </Fragment>
         )}
       </div>
